@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Templates - Nordic Heat</title>
+    <style>
+        /* Email-safe CSS - inline styles in production */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #2a2a2a;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f7f5f0;
+        }
+        .email-container {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        .email-header {
+            background: linear-gradient(135deg, #2d5f4f, #1d4537);
+            color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .email-header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-family: Georgia, serif;
+        }
+        .email-body {
+            padding: 30px 20px;
+        }
+        .email-body h2 {
+            color: #2d5f4f;
+            font-size: 20px;
+            margin-top: 0;
+        }
+        .booking-details {
+            background-color: #f7f5f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .booking-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .booking-details td {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .booking-details td:first-child {
+            font-weight: 600;
+            color: #2d5f4f;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #2d5f4f;
+            color: #ffffff !important;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .checklist {
+            background-color: #e8f5f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .checklist-item::before {
+            content: "✓";
+            color: #2d5f4f;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .email-footer {
+            background-color: #2d5f4f;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .email-footer a {
+            color: #c29356;
+            text-decoration: none;
+        }
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, #2d5f4f, #c29356);
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================ -->
+<!-- TEMPLATE 1: BOOKING CONFIRMATION -->
+<!-- ============================================ -->
+
+<div class="email-container">
+    <div class="email-header">
+        <h1>🌿 Nordic Heat</h1>
+        <p style="margin: 10px 0 0 0; opacity: 0.9;">Premium Mobile Sauna Hire</p>
+    </div>
+    
+    <div class="email-body">
+        <h2>Booking Confirmation</h2>
+        
+        <p>Hi <strong>{{CUSTOMER_NAME}}</strong>,</p>
+        
+        <p>Thank you for choosing Nordic Heat! We're excited to bring the authentic Finnish sauna experience to your doorstep.</p>
+        
+        <div class="booking-details">
+            <h3 style="margin-top: 0; color: #2d5f4f;">Your Booking Details</h3>
+            <table>
+                <tr>
+                    <td>Booking Reference:</td>
+                    <td><strong>{{BOOKING_ID}}</strong></td>
+                </tr>
+                <tr>
+                    <td>Package:</td>
+                    <td>{{PACKAGE_NAME}}</td>
+                </tr>
+                <tr>
+                    <td>Start Date:</td>
+                    <td>{{START_DATE}}</td>
+                </tr>
+                <tr>
+                    <td>End Date:</td>
+                    <td>{{END_DATE}}</td>
+                </tr>
+                <tr>
+                    <td>Number of Guests:</td>
+                    <td>{{GUEST_COUNT}}</td>
+                </tr>
+                <tr>
+                    <td>Delivery Address:</td>
+                    <td>{{DELIVERY_ADDRESS}}</td>
+                </tr>
+                <tr style="font-size: 18px;">
+                    <td>Total Price:</td>
+                    <td><strong>£{{TOTAL_PRICE}}</strong></td>
+                </tr>
+            </table>
+        </div>
+        
+        <h3 style="color: #2d5f4f;">Next Steps:</h3>
+        <ol style="line-height: 2;">
+            <li>Complete your <strong>30% deposit (£{{DEPOSIT_AMOUNT}})</strong> to confirm booking</li>
+            <li>We'll send final confirmation within 4 hours</li>
+            <li>Remaining balance (£{{BALANCE_AMOUNT}}) due 7 days before hire date</li>
+        </ol>
+        
+        <div style="text-align: center;">
+            <a href="{{PAYMENT_LINK}}" class="cta-button">Complete Payment →</a>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <p style="color: #5a5a5a; font-size: 14px;">
+            <strong>Have questions?</strong> Reply to this email or call us on <strong>01234 567 890</strong>
+        </p>
+    </div>
+    
+    <div class="email-footer">
+        <p><strong>Nordic Heat Mobile Saunas</strong></p>
+        <p>Oxfordshire, UK | <a href="tel:01234567890">01234 567 890</a> | <a href="mailto:hello@nordicheat.co.uk">hello@nordicheat.co.uk</a></p>
+        <p style="margin-top: 20px; font-size: 12px; opacity: 0.8;">
+            <a href="{{UNSUBSCRIBE_LINK}}">Unsubscribe</a> | <a href="{{TERMS_LINK}}">Terms & Conditions</a>
+        </p>
+    </div>
+</div>
+
+<br><br>
+
+<!-- ============================================ -->
+<!-- TEMPLATE 2: PAYMENT CONFIRMATION -->
+<!-- ============================================ -->
+
+<div class="email-container">
+    <div class="email-header">
+        <h1>🌿 Nordic Heat</h1>
+        <p style="margin: 10px 0 0 0; opacity: 0.9;">Premium Mobile Sauna Hire</p>
+    </div>
+    
+    <div class="email-body">
+        <h2>🎉 Payment Confirmed - You're All Set!</h2>
+        
+        <p>Hi <strong>{{CUSTOMER_NAME}}</strong>,</p>
+        
+        <p>Fantastic news! Your deposit has been received and your sauna booking is confirmed.</p>
+        
+        <div style="background: linear-gradient(135deg, #e8f5f1, #f7f5f0); padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0;">
+            <div style="font-size: 16px; color: #5a5a5a; margin-bottom: 5px;">Booking Reference</div>
+            <div style="font-size: 32px; font-weight: bold; color: #2d5f4f; letter-spacing: 2px;">{{BOOKING_ID}}</div>
+        </div>
+        
+        <div class="booking-details">
+            <h3 style="margin-top: 0; color: #2d5f4f;">Booking Summary</h3>
+            <table>
+                <tr>
+                    <td>Package:</td>
+                    <td>{{PACKAGE_NAME}}</td>
+                </tr>
+                <tr>
+                    <td>Dates:</td>
+                    <td>{{START_DATE}} to {{END_DATE}}</td>
+                </tr>
+                <tr>
+                    <td>Deposit Paid:</td>
+                    <td><span style="color: #2d5f4f;">✓</span> £{{DEPOSIT_AMOUNT}}</td>
+                </tr>
+                <tr style="background-color: #fff3e0;">
+                    <td><strong>Balance Due:</strong></td>
+                    <td><strong>£{{BALANCE_AMOUNT}}</strong></td>
+                </tr>
+                <tr>
+                    <td>Payment Due Date:</td>
+                    <td>{{BALANCE_DUE_DATE}}</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="checklist">
+            <h3 style="margin-top: 0; color: #2d5f4f;">Preparation Checklist</h3>
+            <p>Please ensure you have the following ready for delivery day:</p>
+            <div class="checklist-item">Level outdoor space (minimum 3m x 2m)</div>
+            <div class="checklist-item">Clear access for delivery (3m width minimum)</div>
+            <div class="checklist-item">Safe clearance from buildings (2m)</div>
+            <div class="checklist-item">Towels and water for your guests</div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <h3 style="color: #2d5f4f;">What Happens Next?</h3>
+        <ul style="line-height: 2;">
+            <li><strong>7 days before:</strong> We'll call to confirm delivery time window</li>
+            <li><strong>Delivery day:</strong> Our team arrives, sets up, and provides safety briefing</li>
+            <li><strong>During hire:</strong> 24/7 support hotline available</li>
+            <li><strong>Collection:</strong> We return at agreed time to collect</li>
+        </ul>
+        
+        <p style="background-color: #e8f5f1; padding: 15px; border-radius: 8px; border-left: 4px solid #2d5f4f;">
+            <strong>💡 Pro Tip:</strong> The sauna takes 45-60 minutes to reach optimal temperature (80°C). Start heating it before you want to use it!
+        </p>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <p><strong>Questions or need to make changes?</strong></p>
+            <p>Call us on <strong style="color: #2d5f4f;">01234 567 890</strong> or reply to this email</p>
+        </div>
+    </div>
+    
+    <div class="email-footer">
+        <p><strong>Nordic Heat Mobile Saunas</strong></p>
+        <p>Bringing authentic Finnish wellness to your doorstep</p>
+        <p style="margin-top: 15px;">
+            <a href="{{WEBSITE_URL}}">nordicheat.co.uk</a> | 
+            <a href="tel:01234567890">01234 567 890</a> | 
+            <a href="mailto:hello@nordicheat.co.uk">hello@nordicheat.co.uk</a>
+        </p>
+        <p style="margin-top: 20px; font-size: 12px; opacity: 0.8;">
+            <a href="{{FACEBOOK_URL}}">Facebook</a> | 
+            <a href="{{INSTAGRAM_URL}}">Instagram</a> | 
+            <a href="{{UNSUBSCRIBE_LINK}}">Unsubscribe</a>
+        </p>
+    </div>
+</div>
+
+<br><br>
+
+<!-- ============================================ -->
+<!-- TEMPLATE 3: PRE-DELIVERY REMINDER -->
+<!-- ============================================ -->
+
+<div class="email-container">
+    <div class="email-header">
+        <h1>🌿 Nordic Heat</h1>
+        <p style="margin: 10px 0 0 0; opacity: 0.9;">Premium Mobile Sauna Hire</p>
+    </div>
+    
+    <div class="email-body">
+        <h2>🚚 Your Sauna Arrives in 7 Days!</h2>
+        
+        <p>Hi <strong>{{CUSTOMER_NAME}}</strong>,</p>
+        
+        <p>We're getting excited to deliver your sauna experience! This is a quick reminder about your upcoming booking.</p>
+        
+        <div class="booking-details">
+            <h3 style="margin-top: 0; color: #2d5f4f;">Delivery Details</h3>
+            <table>
+                <tr>
+                    <td>Booking Reference:</td>
+                    <td><strong>{{BOOKING_ID}}</strong></td>
+                </tr>
+                <tr>
+                    <td>Delivery Date:</td>
+                    <td><strong>{{DELIVERY_DATE}}</strong></td>
+                </tr>
+                <tr>
+                    <td>Delivery Window:</td>
+                    <td>{{DELIVERY_TIME_WINDOW}}</td>
+                </tr>
+                <tr>
+                    <td>Collection Date:</td>
+                    <td>{{COLLECTION_DATE}}</td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td>{{DELIVERY_ADDRESS}}</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="background-color: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #c29356; margin: 20px 0;">
+            <h3 style="margin-top: 0; color: #b88a5a;">⚠️ Balance Payment Due</h3>
+            <p style="margin-bottom: 0;">Please ensure the remaining balance of <strong>£{{BALANCE_AMOUNT}}</strong> is paid by <strong>{{BALANCE_DUE_DATE}}</strong></p>
+        </div>
+        
+        <div class="checklist">
+            <h3 style="margin-top: 0; color: #2d5f4f;">Final Preparation Checklist</h3>
+            <div class="checklist-item">Clear and level the delivery area</div>
+            <div class="checklist-item">Ensure 3m width access for our vehicle</div>
+            <div class="checklist-item">Check 2m clearance from buildings/structures</div>
+            <div class="checklist-item">Have towels ready for guests</div>
+            <div class="checklist-item">Prepare cold beverages (stay hydrated!)</div>
+            <div class="checklist-item">Plan cooling-off area (outdoor shower/pool)</div>
+        </div>
+        
+        <h3 style="color: #2d5f4f;">What We'll Provide:</h3>
+        <ul>
+            <li>Fully assembled barrel sauna</li>
+            <li>Wood-fired stove (pre-checked)</li>
+            <li>Sustainably sourced wood fuel</li>
+            <li>Safety equipment (fire extinguisher, CO detector)</li>
+            <li>Operating instructions and safety briefing</li>
+            <li>24/7 support hotline number</li>
+        </ul>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <p><strong>Need to change anything?</strong></p>
+            <p>Contact us ASAP: <strong style="color: #2d5f4f;">01234 567 890</strong></p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <p style="text-align: center; font-style: italic; color: #5a5a5a;">
+            "Get ready for the ultimate relaxation experience. We can't wait to bring Nordic wellness to your doorstep!"
+        </p>
+    </div>
+    
+    <div class="email-footer">
+        <p><strong>Nordic Heat Mobile Saunas</strong></p>
+        <p>Oxfordshire, UK | <a href="tel:01234567890">01234 567 890</a> | <a href="mailto:hello@nordicheat.co.uk">hello@nordicheat.co.uk</a></p>
+    </div>
+</div>
+
+<br><br>
+
+<!-- ============================================ -->
+<!-- TEMPLATE 4: POST-HIRE FOLLOW-UP -->
+<!-- ============================================ -->
+
+<div class="email-container">
+    <div class="email-header">
+        <h1>🌿 Nordic Heat</h1>
+        <p style="margin: 10px 0 0 0; opacity: 0.9;">Premium Mobile Sauna Hire</p>
+    </div>
+    
+    <div class="email-body">
+        <h2>Thank You for Choosing Nordic Heat!</h2>
+        
+        <p>Hi <strong>{{CUSTOMER_NAME}}</strong>,</p>
+        
+        <p>We hope you thoroughly enjoyed your Nordic Heat sauna experience! It was our pleasure bringing authentic Finnish wellness to your {{LOCATION}}.</p>
+        
+        <div style="text-align: center; background: linear-gradient(135deg, #e8f5f1, #f7f5f0); padding: 30px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="color: #2d5f4f; margin-top: 0;">How Was Your Experience?</h3>
+            <p style="margin-bottom: 20px;">Your feedback helps us continue delivering exceptional service</p>
+            <a href="{{REVIEW_LINK}}" class="cta-button">Leave a Review ⭐</a>
+        </div>
+        
+        <div style="background-color: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #c29356; margin: 20px 0; text-align: center;">
+            <h3 style="margin-top: 0; color: #b88a5a;">🎁 Special Offer for You</h3>
+            <p><strong>Get 15% off your next booking!</strong></p>
+            <p style="font-size: 24px; font-family: monospace; background-color: white; padding: 10px; border-radius: 4px; margin: 15px 0;">
+                <strong>{{DISCOUNT_CODE}}</strong>
+            </p>
+            <p style="margin-bottom: 0; font-size: 14px;">Valid for 90 days</p>
+        </div>
+        
+        <h3 style="color: #2d5f4f;">Share the Wellness</h3>
+        <p>Know someone who'd love a mobile sauna experience? Refer a friend and you'll both receive a £25 credit!</p>
+        
+        <div style="text-align: center; margin: 25px 0;">
+            <a href="{{REFERRAL_LINK}}" style="display: inline-block; background-color: transparent; color: #2d5f4f; padding: 12px 25px; text-decoration: none; border: 2px solid #2d5f4f; border-radius: 8px; font-weight: 600;">
+                Refer a Friend →
+            </a>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <h3 style="color: #2d5f4f;">Stay Connected</h3>
+        <p>Follow us on social media for wellness tips, special offers, and behind-the-scenes content:</p>
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="{{FACEBOOK_URL}}" style="display: inline-block; margin: 0 10px; color: #2d5f4f; font-size: 24px;">📘</a>
+            <a href="{{INSTAGRAM_URL}}" style="display: inline-block; margin: 0 10px; color: #2d5f4f; font-size: 24px;">📷</a>
+            <a href="{{TWITTER_URL}}" style="display: inline-block; margin: 0 10px; color: #2d5f4f; font-size: 24px;">🐦</a>
+        </div>
+        
+        <p style="text-align: center; margin-top: 30px;">
+            <strong>Questions or feedback?</strong><br>
+            We'd love to hear from you: <a href="mailto:hello@nordicheat.co.uk" style="color: #2d5f4f;">hello@nordicheat.co.uk</a>
+        </p>
+    </div>
+    
+    <div class="email-footer">
+        <p><strong>Nordic Heat Mobile Saunas</strong></p>
+        <p>Thank you for supporting local wellness business! 🙏</p>
+        <p style="margin-top: 15px;">
+            <a href="{{WEBSITE_URL}}">Book Again</a> | 
+            <a href="tel:01234567890">01234 567 890</a> | 
+            <a href="mailto:hello@nordicheat.co.uk">hello@nordicheat.co.uk</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
+
