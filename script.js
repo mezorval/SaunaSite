@@ -1,5 +1,5 @@
 // ============================================
-// NOMAD STEAM MOBILE SAUNAS - JAVASCRIPT
+// ROAMING HEAT MOBILE SAUNAS - JAVASCRIPT
 // Interactive Features & Form Handling
 // ============================================
 
@@ -557,7 +557,7 @@ function animateOnScroll() {
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Nomad Steam Mobile Saunas - Website Loaded');
+    console.log('Roaming Heat Mobile Saunas - Website Loaded');
     
     // Initialize features
     handleNavbarScroll();
@@ -716,4 +716,78 @@ document.querySelectorAll('.btn-primary').forEach(btn => {
         trackEvent('CTA', 'Click', text);
     });
 });
+
+// ============================================
+// LOGO STEAM EFFECTS
+// ============================================
+
+const logoText = document.getElementById('logoText');
+const letters = document.querySelectorAll('.logo-text .letter');
+
+if (logoText) {
+    let isHovering = false;
+    
+    logoText.addEventListener('mouseenter', () => {
+        isHovering = true;
+        letters.forEach((letter, index) => {
+            letter.style.animation = 'none';
+            // Force reflow
+            void letter.offsetWidth;
+            letter.style.animation = `letter-steam 1.2s ease-out forwards`;
+            letter.style.animationDelay = `${index * 0.05}s`;
+        });
+    });
+    
+    logoText.addEventListener('mouseleave', () => {
+        isHovering = false;
+        letters.forEach((letter) => {
+            letter.style.animation = 'none';
+            // Force reflow
+            void letter.offsetWidth;
+            letter.style.animation = `letter-reset 0.5s ease-out forwards`;
+        });
+    });
+}
+
+// Enhanced steam effect for logo image - add multiple steam particles
+const logoImageWrapper = document.querySelector('.logo-image-wrapper');
+if (logoImageWrapper) {
+    // Create additional steam particles dynamically
+    for (let i = 0; i < 3; i++) {
+        const steamParticle = document.createElement('div');
+        steamParticle.className = 'steam-particle';
+        steamParticle.style.cssText = `
+            position: absolute;
+            top: 50%;
+            left: ${45 + i * 5}%;
+            transform: translate(-50%, -50%);
+            width: ${25 + i * 5}px;
+            height: ${25 + i * 5}px;
+            background: radial-gradient(circle, rgba(100, 100, 100, 0.85) 0%, rgba(130, 130, 130, 0.65) 25%, rgba(160, 160, 160, 0.45) 50%, rgba(180, 180, 180, 0.25) 70%, transparent 85%);
+            border-radius: 50%;
+            filter: blur(9px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        `;
+        logoImageWrapper.querySelector('.steam-effect')?.appendChild(steamParticle);
+    }
+    
+    logoImageWrapper.addEventListener('mouseenter', () => {
+        const particles = logoImageWrapper.querySelectorAll('.steam-particle');
+        particles.forEach((particle, index) => {
+            particle.style.opacity = '1';
+            particle.style.animation = `steam-rise 1.5s ease-out infinite`;
+            particle.style.animationDelay = `${index * 0.2}s`;
+        });
+    });
+    
+    logoImageWrapper.addEventListener('mouseleave', () => {
+        const particles = logoImageWrapper.querySelectorAll('.steam-particle');
+        particles.forEach((particle) => {
+            particle.style.opacity = '0';
+            particle.style.animation = 'none';
+        });
+    });
+}
 

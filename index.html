@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium mobile sauna hire in the UK. Bring the ultimate wellness experience to your doorstep. Book authentic Finnish barrel saunas for events, parties, or personal relaxation.">
     <meta name="keywords" content="mobile sauna, sauna hire, barrel sauna, wellness, UK sauna rental, event sauna, garden sauna">
-    <meta name="author" content="Nomad Steam Mobile Saunas">
+    <meta name="author" content="Roaming Heat Mobile Saunas">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Nomad Steam Mobile Saunas - Premium Sauna Hire UK">
+    <meta property="og:title" content="Roaming Heat Mobile Saunas - Premium Sauna Hire UK">
     <meta property="og:description" content="Experience authentic Finnish sauna culture at your location. Premium mobile sauna hire for wellness, events, and relaxation.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nomadsteam.co.uk">
+    <meta property="og:url" content="https://roamingheat.co.uk">
     
-    <title>Nomad Steam Mobile Saunas - Premium Sauna Hire UK | Wellness Delivered</title>
+    <title>Roaming Heat Mobile Saunas - Premium Sauna Hire UK | Wellness Delivered</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,11 +32,13 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-caravan"></i>
-                        <i class="fas fa-cloud steam-icon"></i>
+                    <div class="logo-image-wrapper">
+                        <img src="images/roaming-sauna-logo.png" alt="Roaming Heat Logo" class="logo-image">
+                        <div class="steam-effect"></div>
                     </div>
-                    <span>Nomad Steam</span>
+                    <span class="logo-text" id="logoText">
+                        <span class="letter">R</span><span class="letter">o</span><span class="letter">a</span><span class="letter">m</span><span class="letter">i</span><span class="letter">n</span><span class="letter">g</span><span class="letter space"> </span><span class="letter">H</span><span class="letter">e</span><span class="letter">a</span><span class="letter">t</span>
+                    </span>
                 </div>
                 
                 <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
@@ -48,12 +50,10 @@
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
                     <li><a href="#pricing" class="nav-link">Pricing</a></li>
                     <li><a href="#gallery" class="nav-link">Gallery</a></li>
                     <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="#booking" class="btn btn-primary btn-nav">Book Now</a></li>
+                    <li><a href="#contact" class="btn btn-primary btn-nav">Get Quote</a></li>
                 </ul>
             </div>
         </div>
@@ -71,10 +71,10 @@
         </div>
         <div class="hero-content">
             <div class="container">
-                <h1 class="hero-title">Experience Authentic Finnish Wellness</h1>
-                <p class="hero-subtitle">Premium mobile sauna hire delivered to your doorstep. Transform any space into your personal wellness sanctuary.</p>
+                <h1 class="hero-title">Luxury Barrel Sauna Delivered Anywhere in Devon</h1>
+                <p class="hero-subtitle">Wood-fired wellness on wheels. Transform your garden, event, or wild location into a premium sauna retreat.</p>
                 <div class="hero-cta">
-                    <a href="#booking" class="btn btn-primary btn-large">Check Availability</a>
+                    <a href="#contact" class="btn btn-primary btn-large">Get a Quote</a>
                     <a href="#pricing" class="btn btn-secondary btn-large">View Pricing</a>
                 </div>
                 <div class="hero-features">
@@ -112,7 +112,7 @@
             <div class="section-header text-center">
                 <h2 class="section-title">Our Story</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">Bringing the Ancient Art of Finnish Sauna Culture to Modern Britain</p>
+                <p class="section-subtitle">From Scandinavian Trails to Devon Hills - Our Journey</p>
             </div>
             
             <div class="about-content">
@@ -125,8 +125,9 @@
                     </div>
                     <div class="about-text">
                         <h3>Crafted for Wellness, Built with Passion</h3>
-                        <p>Nomad Steam was born from a simple belief: everyone deserves access to the profound benefits of authentic sauna bathing. Having experienced the transformative power of traditional Finnish saunas, we set out to make this ancient wellness practice accessible, convenient, and unforgettable.</p>
-                        <p>Our barrel saunas are handcrafted from sustainably sourced timber, featuring traditional wood-fired heating that creates the perfect dry heat environment. Each sauna can accommodate up to 6 people and reaches optimal temperatures of 70-90°C.</p>
+                        <p>Roaming Heat started in the heart of Devon after years of travelling and experiencing traditional saunas across Scandinavia. We fell in love with the ritual, the community, and the incredible health benefits. Returning to the UK, we couldn't find this authentic experience anywhere, so we built it ourselves.</p>
+                        <p>What began as a passion project for friends and family quickly became something special. After countless evenings watching the sun set over Devon hills from our handcrafted barrel sauna, we knew we had to share this magic. Our mobile sauna brings the authentic Finnish experience to your location - whether that's your garden, a wild Devon landscape, or your special event.</p>
+                        <p>Each sauna is handcrafted from sustainably sourced timber, featuring traditional wood-fired heating. Seats up to 6 people comfortably, reaching optimal temperatures of 70-90°C. We personally deliver, set up, and ensure you're confident before your first session.</p>
                         
                         <div class="about-values">
                             <div class="value-item">
@@ -243,191 +244,98 @@
             <div class="section-header text-center">
                 <h2 class="section-title">Pricing & Packages</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">Flexible Options for Every Occasion - Sessions, Day Hire & Extended Rentals</p>
+                <p class="section-subtitle">Simple, Flexible Pricing for Any Occasion</p>
             </div>
             
-            <!-- Session-Based Pricing -->
-            <div class="pricing-type-section">
-                <h3 class="pricing-type-title">Sauna Sessions</h3>
-                <p class="pricing-type-subtitle">Perfect if you just want to try the experience or need flexibility</p>
-                <div class="pricing-grid sessions-grid">
-                    <div class="pricing-card session-card">
-                        <div class="package-tag">Private Experience</div>
-                        <h3 class="package-name">Private Sauna Session</h3>
-                        <div class="package-price">
-                            <span class="price">£60</span>
-                            <span class="duration">per session</span>
-                        </div>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Exclusive private use (up to 6 people)</li>
-                            <li><i class="fas fa-check"></i> Recommended for 4 people (maximum comfort)</li>
-                            <li><i class="fas fa-check"></i> Traditional birch broom</li>
-                            <li><i class="fas fa-check"></i> Wood fuel included</li>
-                            <li><i class="fas fa-check"></i> Full setup & briefing</li>
-                        </ul>
-                        <a href="#booking" class="btn btn-outline">Book Session</a>
-                    </div>
-                    
-                    <div class="pricing-card session-card">
-                        <div class="package-tag">Public Booking</div>
-                        <h3 class="package-name">Public Sauna Session</h3>
-                        <div class="package-price">
-                            <span class="price">£15</span>
-                            <span class="duration">per person</span>
-                        </div>
-                        <ul class="package-features">
-                            <li><i class="fas fa-check"></i> Book a seat and enjoy sauna</li>
-                            <li><i class="fas fa-check"></i> Open for up to 4 users</li>
-                            <li><i class="fas fa-check"></i> No hassle of organising a group</li>
-                            <li><i class="fas fa-check"></i> Traditional birch broom</li>
-                            <li><i class="fas fa-check"></i> Perfect for trying first time</li>
-                        </ul>
-                        <a href="#booking" class="btn btn-outline">Book Seat</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="pricing-divider">
-                <span>or</span>
-            </div>
-            
-            <!-- Rental Packages -->
-            <div class="pricing-type-section">
-                <h3 class="pricing-type-title">Full Day & Extended Rentals</h3>
-                <p class="pricing-type-subtitle">Perfect for events, parties, and weekend getaways</p>
-                <div class="pricing-grid">
+            <div class="pricing-grid">
                 <!-- Package 1 -->
                 <div class="pricing-card">
-                    <div class="package-tag">Perfect for First-Timers</div>
-                    <h3 class="package-name">Evening Escape</h3>
+                    <div class="package-tag">Try It Out</div>
+                    <h3 class="package-name">Half Day Hire</h3>
                     <div class="package-price">
-                        <span class="price">£149</span>
+                        <span class="price">£120</span>
                         <span class="duration">4 hours</span>
                     </div>
                     <ul class="package-features">
-                        <li><i class="fas fa-check"></i> Delivery & collection</li>
+                        <li><i class="fas fa-check"></i> Delivery & collection included</li>
                         <li><i class="fas fa-check"></i> Full setup & safety briefing</li>
-                        <li><i class="fas fa-check"></i> Wood fuel included (4kg)</li>
-                        <li><i class="fas fa-check"></i> Seats up to 6 people</li>
-                        <li><i class="fas fa-check"></i> Traditional birch broom</li>
-                        <li><i class="fas fa-check"></i> Safety equipment provided</li>
-                        <li><i class="fas fa-check"></i> Optimal temperature: 70-90°C</li>
-                        <li><i class="fas fa-check"></i> 24/7 support hotline</li>
+                        <li><i class="fas fa-check"></i> Sustainably sourced firewood</li>
+                        <li><i class="fas fa-check"></i> Accommodates up to 6 people</li>
+                        <li><i class="fas fa-check"></i> Traditional Finnish birch broom</li>
+                        <li><i class="fas fa-check"></i> Safety equipment included</li>
+                        <li><i class="fas fa-check"></i> Perfect for first-time users</li>
                     </ul>
-                    <a href="#booking" class="btn btn-outline">Book Now</a>
+                    <a href="#contact" class="btn btn-outline">Request Quote</a>
                 </div>
                 
                 <!-- Package 2 -->
-                <div class="pricing-card featured">
-                    <div class="package-badge">Most Popular</div>
-                    <div class="package-tag">Best Value</div>
-                    <h3 class="package-name">Full Day Wellness</h3>
+                <div class="pricing-card">
+                    <div class="package-tag">Great Value</div>
+                    <h3 class="package-name">Full Day Hire</h3>
                     <div class="package-price">
-                        <span class="price">£249</span>
-                        <span class="duration">12 hours</span>
+                        <span class="price">£200</span>
+                        <span class="duration">24 hours</span>
                     </div>
                     <ul class="package-features">
-                        <li><i class="fas fa-check"></i> Everything in Evening Escape</li>
-                        <li><i class="fas fa-check"></i> Extended 12-hour hire</li>
-                        <li><i class="fas fa-check"></i> Extra wood fuel (12kg total)</li>
-                        <li><i class="fas fa-check"></i> Traditional birch broom</li>
+                        <li><i class="fas fa-check"></i> Everything in Half Day Hire</li>
+                        <li><i class="fas fa-check"></i> Full 24-hour access</li>
+                        <li><i class="fas fa-check"></i> Generous wood fuel supply</li>
                         <li><i class="fas fa-check"></i> Premium sauna accessories kit</li>
-                        <li><i class="fas fa-check"></i> Aromatherapy oils included</li>
-                        <li><i class="fas fa-check"></i> Digital thermometer</li>
-                        <li><i class="fas fa-check"></i> Optimal temperature: 70-90°C</li>
-                        <li><i class="fas fa-check"></i> Free rescheduling (7 days notice)</li>
+                        <li><i class="fas fa-check"></i> Aromatherapy essential oils</li>
+                        <li><i class="fas fa-check"></i> Sauna bucket & ladle</li>
+                        <li><i class="fas fa-check"></i> Perfect for parties & gatherings</li>
                     </ul>
-                    <a href="#booking" class="btn btn-primary">Book Now</a>
+                    <a href="#contact" class="btn btn-outline">Request Quote</a>
                 </div>
                 
                 <!-- Package 3 -->
                 <div class="pricing-card featured">
                     <div class="package-badge">Most Popular</div>
                     <div class="package-tag">Best Value</div>
-                    <h3 class="package-name">Weekend Retreat</h3>
+                    <h3 class="package-name">Weekend Hire</h3>
                     <div class="package-price">
                         <span class="price">£250</span>
-                        <span class="duration">2 Day Weekend</span>
+                        <span class="duration">48 hours</span>
                     </div>
                     <ul class="package-features">
-                        <li><i class="fas fa-check"></i> Everything in Full Day</li>
-                        <li><i class="fas fa-check"></i> Full weekend (Fri-Sun)</li>
-                        <li><i class="fas fa-check"></i> Unlimited wood fuel</li>
-                        <li><i class="fas fa-check"></i> Traditional birch broom</li>
+                        <li><i class="fas fa-check"></i> Everything in Full Day Hire</li>
+                        <li><i class="fas fa-check"></i> Full weekend (Friday-Sunday)</li>
+                        <li><i class="fas fa-check"></i> Unlimited sustainably sourced wood</li>
                         <li><i class="fas fa-check"></i> Premium towels & robes (6 sets)</li>
                         <li><i class="fas fa-check"></i> Luxury sauna bucket & ladle</li>
+                        <li><i class="fas fa-check"></i> Aromatherapy oils</li>
                         <li><i class="fas fa-check"></i> Bluetooth speaker</li>
-                        <li><i class="fas fa-check"></i> Optimal temperature: 70-90°C</li>
-                        <li><i class="fas fa-check"></i> Free rescheduling anytime</li>
+                        <li><i class="fas fa-check"></i> Free rescheduling (7 days notice)</li>
                     </ul>
-                    <a href="#booking" class="btn btn-outline">Book Now</a>
+                    <a href="#contact" class="btn btn-primary">Request Quote</a>
                 </div>
                 
-                <!-- Package 4 - Overnight -->
+                <!-- Package 4 - Custom/Event -->
                 <div class="pricing-card">
-                    <div class="package-tag">Overnight</div>
-                    <h3 class="package-name">One Night Hire</h3>
+                    <div class="package-tag">Bespoke</div>
+                    <h3 class="package-name">Weekly & Custom Hire</h3>
                     <div class="package-price">
-                        <span class="price">£150</span>
-                        <span class="duration">Overnight</span>
+                        <span class="price">From £350</span>
+                        <span class="duration">7+ days</span>
                     </div>
                     <ul class="package-features">
-                        <li><i class="fas fa-check"></i> Everything in Evening Escape</li>
-                        <li><i class="fas fa-check"></i> Overnight access</li>
-                        <li><i class="fas fa-check"></i> Extra wood fuel (8kg total)</li>
-                        <li><i class="fas fa-check"></i> Traditional birch broom</li>
-                        <li><i class="fas fa-check"></i> Optimal temperature: 70-90°C</li>
-                        <li><i class="fas fa-check"></i> Perfect for special occasions</li>
-                    </ul>
-                    <a href="#booking" class="btn btn-outline">Book Now</a>
-                </div>
-                
-                <!-- Package 5 - 3 Day Mid-Week -->
-                <div class="pricing-card">
-                    <div class="package-tag">Mid-Week Special</div>
-                    <h3 class="package-name">3 Day Mid-Week</h3>
-                    <div class="package-price">
-                        <span class="price">£250</span>
-                        <span class="duration">3 Days</span>
-                    </div>
-                    <ul class="package-features">
-                        <li><i class="fas fa-check"></i> Perfect for extended relaxation</li>
-                        <li><i class="fas fa-check"></i> Unlimited wood fuel</li>
-                        <li><i class="fas fa-check"></i> Traditional birch broom</li>
-                        <li><i class="fas fa-check"></i> Optimal temperature: 70-90°C</li>
-                        <li><i class="fas fa-check"></i> All day access</li>
-                        <li><i class="fas fa-check"></i> Great value for longer stays</li>
-                    </ul>
-                    <a href="#booking" class="btn btn-outline">Book Now</a>
-                </div>
-                
-                <!-- Package 6 - Custom/Event -->
-                <div class="pricing-card">
-                    <div class="package-tag">Bespoke Experience</div>
-                    <h3 class="package-name">Event & Custom</h3>
-                    <div class="package-price">
-                        <span class="price">POA</span>
-                        <span class="duration">Custom duration</span>
-                    </div>
-                    <ul class="package-features">
+                        <li><i class="fas fa-check"></i> Perfect for extended stays</li>
                         <li><i class="fas fa-check"></i> Weddings & corporate events</li>
-                        <li><i class="fas fa-check"></i> Extended multi-day hire</li>
-                        <li><i class="fas fa-check"></i> Multiple sauna units</li>
-                        <li><i class="fas fa-check"></i> One week hire available (£450)</li>
-                        <li><i class="fas fa-check"></i> Dedicated attendant option</li>
-                        <li><i class="fas fa-check"></i> Custom branding available</li>
-                        <li><i class="fas fa-check"></i> Site visit & consultation</li>
+                        <li><i class="fas fa-check"></i> Unlimited wood fuel</li>
+                        <li><i class="fas fa-check"></i> All premium amenities</li>
+                        <li><i class="fas fa-check"></i> Flexible duration</li>
+                        <li><i class="fas fa-check"></i> Tailored to your needs</li>
+                        <li><i class="fas fa-check"></i> Site visit available</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Enquire Now</a>
+                    <a href="#contact" class="btn btn-outline">Get Custom Quote</a>
                 </div>
-            </div>
             </div>
             
             <div class="pricing-notes">
-                <p><i class="fas fa-map-marker-alt"></i> <strong>Free Delivery:</strong> Within 15-20 miles of our base (depending on location). Extended range available - contact us for quote.</p>
-                <p><i class="fas fa-credit-card"></i> <strong>Deposit:</strong> 30% deposit required to secure booking. Balance due 7 days before hire date. All payments secure via Stripe.</p>
-                <p><i class="fas fa-shield-alt"></i> <strong>Insurance:</strong> All hires covered by our comprehensive £5M public liability insurance.</p>
-                <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> Prices within 15 miles of base. Delivery/collection cost for longer distances quoted individually. All packages include traditional birch broom.</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Delivery:</strong> Free within 15 miles of our Devon base. £2 per mile beyond 15 miles. We cover all of Devon, Cornwall, Somerset & beyond.</p>
+                <p><i class="fas fa-credit-card"></i> <strong>Deposit:</strong> 30% deposit required to secure your dates. Balance due 7 days before hire.</p>
+                <p><i class="fas fa-shield-alt"></i> <strong>Fully Insured:</strong> £5M public liability insurance. All equipment PAT tested and safety certified.</p>
+                <p><i class="fas fa-info-circle"></i> <strong>What's Included:</strong> Delivery, setup, all wood fuel, traditional birch broom, safety equipment, and full briefing.</p>
             </div>
         </div>
     </section>
@@ -438,7 +346,7 @@
             <div class="section-header text-center">
                 <h2 class="section-title">Gallery</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">Experience the Nomad Steam Difference</p>
+                <p class="section-subtitle">Experience the Roaming Heat Difference</p>
             </div>
             
             <div class="gallery-grid">
@@ -603,6 +511,30 @@
         </div>
     </section>
 
+    <!-- Social Proof Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Events Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials section-padding">
         <div class="container">
@@ -623,7 +555,7 @@
                     <p class="testimonial-text">"Absolutely incredible experience! We hired the sauna for my husband's 40th birthday party. It was the highlight of the evening. The team were professional, the sauna was immaculate, and our guests are still talking about it weeks later! The authentic wood-fired heat is incredible."</p>
                     <div class="testimonial-author">
                         <strong>Sarah M.</strong>
-                        <span>Cotswolds</span>
+                        <span>Exeter, Devon</span>
                     </div>
                 </div>
                 
@@ -638,7 +570,7 @@
                     <p class="testimonial-text">"Loved the sauna experience! Finally found a way to truly relax and unwind. The whole process was seamless - from booking to collection. The authentic Finnish experience exceeded our expectations. Already planning our next hire!"</p>
                     <div class="testimonial-author">
                         <strong>Phil B.</strong>
-                        <span>Devon</span>
+                        <span>Totnes, Devon</span>
                     </div>
                 </div>
                 
@@ -653,7 +585,7 @@
                     <p class="testimonial-text">"Amazing mobile sauna – totally cool and very popular – it was a hit! The sauna heated up to optimal temperature very quickly, and everyone loved it. We will definitely order again for sure!"</p>
                     <div class="testimonial-author">
                         <strong>Nikki T.</strong>
-                        <span>Cricket St. Thomas</span>
+                        <span>Dartmouth, Devon</span>
                     </div>
                 </div>
                 
@@ -668,7 +600,7 @@
                     <p class="testimonial-text">"I was sceptical about this at first but absolutely loved it! The sauna ended up being the highlight of the weekend. The wood-fired heat is unlike anything we've experienced - authentic Finnish quality. I would definitely book it again!"</p>
                     <div class="testimonial-author">
                         <strong>Liz C.</strong>
-                        <span>Cullompton</span>
+                        <span>Plymouth, Devon</span>
                     </div>
                 </div>
             </div>
@@ -731,7 +663,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>We offer free delivery within 15 miles of our Oxfordshire base. For distances between 15-30 miles, there's a £25 delivery charge. We can arrange delivery further afield for longer hire periods or events - please contact us for a custom quote. We cover most of South Central England including Oxfordshire, Gloucestershire, Berkshire, Buckinghamshire, and Wiltshire.</p>
+                        <p>We offer free delivery within 15 miles of our Devon base. Beyond 15 miles, it's just £2 per mile for delivery and collection. We regularly cover all of Devon, Cornwall, and Somerset. Extended range available for longer hires or special events - just get in touch for a quote!</p>
                     </div>
                 </div>
                 
@@ -764,6 +696,36 @@
                         <p>Yes, we understand plans change! Cancellations made more than 14 days before your booking receive a full refund minus the deposit. Cancellations between 7-14 days receive a 50% refund. Unfortunately, cancellations within 7 days cannot be refunded. However, you can reschedule free of charge with 7 days notice (Full Day and Weekend packages) or transfer your booking to someone else anytime.</p>
                     </div>
                 </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How is the sauna cleaned between uses?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your safety and hygiene are paramount. After each hire, we thoroughly clean and sanitize the entire sauna interior with eco-friendly, food-safe cleaning products. All benches, walls, and surfaces are wiped down and disinfected. The sauna is then aired out completely before the next booking. We maintain the highest standards of cleanliness - you can be confident you're getting a spotless, fresh sauna experience.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What happens if something goes wrong during our hire?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide a 24/7 support hotline for all hires. If you experience any issues - whether it's difficulty lighting the fire, temperature concerns, or any equipment problems - just call or WhatsApp us and we'll talk you through it or come out if needed. In the rare event of a breakdown, we offer a full refund or immediate replacement. Your experience is our priority, and we're always here to help.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What insurance do you have?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We carry comprehensive £5M public liability insurance covering all our sauna hires. This protects you and your guests. All our equipment is PAT tested, safety certified, and meets UK fire safety regulations. Each hire includes full safety equipment (fire extinguisher, carbon monoxide detector, first aid kit). We take safety seriously and ensure you're fully covered.</p>
+                    </div>
+                </div>
             </div>
             
             <div class="faq-cta text-center">
@@ -777,9 +739,9 @@
     <section class="booking section-padding" id="booking">
         <div class="container">
             <div class="section-header text-center">
-                <h2 class="section-title">Check Availability & Book</h2>
+                <h2 class="section-title">Check Availability & Get a Quote</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle">Secure Your Sauna Experience Today</p>
+                <p class="section-subtitle">Tell us your dates and we'll send you a personalized quote</p>
             </div>
             
             <div class="booking-wrapper">
@@ -803,25 +765,16 @@
                 
                 <div class="booking-form-container">
                     <form id="bookingForm" class="booking-form">
-                        <h3>Make Your Reservation</h3>
+                        <h3>Request Your Quote</h3>
                         
                         <div class="form-group">
                             <label for="package">Select Package *</label>
                             <select id="package" name="package" required>
                                 <option value="">Choose a package...</option>
-                                <optgroup label="Sessions">
-                                    <option value="private-session">Private Sauna Session - £60</option>
-                                    <option value="public-session">Public Sauna Session - £15 per person</option>
-                                </optgroup>
-                                <optgroup label="Day & Extended Rentals">
-                                    <option value="evening">Evening Escape - £149 (4 hours)</option>
-                                    <option value="fullday">Full Day Wellness - £249 (12 hours)</option>
-                                    <option value="overnight">One Night Hire - £150</option>
-                                    <option value="weekend">Weekend Retreat - £250 (2 days)</option>
-                                    <option value="midweek">3 Day Mid-Week - £250</option>
-                                    <option value="week">One Week Hire - £450</option>
-                                    <option value="custom">Event/Custom - POA</option>
-                                </optgroup>
+                                <option value="halfday">Half Day Hire - £120 (4 hours)</option>
+                                <option value="fullday">Full Day Hire - £200 (24 hours)</option>
+                                <option value="weekend">Weekend Hire - £250 (48 hours)</option>
+                                <option value="weekly">Weekly & Custom - From £350</option>
                             </select>
                         </div>
                         
@@ -899,10 +852,10 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fas fa-calendar-check"></i> Request Booking
+                            <i class="fas fa-envelope"></i> Send Enquiry
                         </button>
                         
-                        <p class="form-note">* You'll receive a confirmation email with payment details. Booking is confirmed upon deposit receipt.</p>
+                        <p class="form-note">* We'll get back to you within 4 hours with availability and a personalized quote.</p>
                     </form>
                 </div>
             </div>
@@ -931,50 +884,6 @@
         </div>
     </section>
 
-    <!-- Buy Sauna Section (Future) -->
-    <section class="buy-sauna section-padding bg-light" id="buy-sauna">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2 class="section-title">Dreaming of Your Own Sauna?</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Make Your Place Special and Enjoy 24/7 Relaxing Warmth</p>
-            </div>
-            
-            <div class="buy-sauna-content">
-                <div class="buy-sauna-image">
-                    <div class="placeholder-image">
-                        <i class="fas fa-home"></i>
-                        <p>Permanent sauna installation</p>
-                    </div>
-                </div>
-                <div class="buy-sauna-text">
-                    <h3>Own Your Wellness Sanctuary</h3>
-                    <p>Love the mobile sauna experience? Why not have your own authentic Finnish barrel sauna permanently installed at your home, garden, or business?</p>
-                    
-                    <div class="buy-sauna-benefits">
-                        <h4>Why Own Your Own Sauna?</h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> <strong>24/7 Access:</strong> Enjoy your sauna anytime, day or night</li>
-                            <li><i class="fas fa-check"></i> <strong>Long-term Investment:</strong> Adds value to your property</li>
-                            <li><i class="fas fa-check"></i> <strong>Perfect Fit:</strong> Custom size and design for your space</li>
-                            <li><i class="fas fa-check"></i> <strong>No Booking Required:</strong> Spontaneous sauna sessions whenever you want</li>
-                            <li><i class="fas fa-check"></i> <strong>Authentic Finnish Design:</strong> Handcrafted with premium materials</li>
-                            <li><i class="fas fa-check"></i> <strong>Wood-Fired or Electric:</strong> Choose your heating preference</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="buy-sauna-cta">
-                        <p><strong>Interested in owning your own sauna?</strong></p>
-                        <a href="#contact" class="btn btn-outline">
-                            <i class="fas fa-info-circle"></i> Get a Quote
-                        </a>
-                        <p class="buy-sauna-note">We offer consultation, design, supply, and installation services. Contact us for more information and pricing.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section class="contact section-padding" id="contact">
         <div class="container">
@@ -988,11 +897,11 @@
                 <div class="contact-info">
                     <div class="contact-card">
                         <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                            <i class="fab fa-whatsapp"></i>
                         </div>
-                        <h3>Phone</h3>
-                        <p><a href="tel:+441234567890">01234 567 890</a></p>
-                        <small>Mon-Sun, 9am-8pm</small>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/447491807060" target="_blank">07491 807 060</a></p>
+                        <small>Quick response - chat anytime</small>
                     </div>
                     
                     <div class="contact-card">
@@ -1000,7 +909,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3>Email</h3>
-                        <p><a href="mailto:hello@nomadsteam.co.uk">hello@nomadsteam.co.uk</a></p>
+                        <p><a href="mailto:info@roamingheat.co.uk">info@roamingheat.co.uk</a></p>
                         <small>We reply within 4 hours</small>
                     </div>
                     
@@ -1009,26 +918,17 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3>Location</h3>
-                        <p>Oxfordshire, UK</p>
-                        <small>Serving South Central England</small>
+                        <p>Devon, UK</p>
+                        <small>Serving Devon, Cornwall & Somerset</small>
                     </div>
                     
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h3>Business Hours</h3>
-                        <p>Mon-Fri: 9am - 5pm</p>
-                        <small>Sat-Sun: By appointment</small>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <h3>WhatsApp</h3>
-                        <p><a href="https://wa.me/441234567890">+44 1234 567 890</a></p>
-                        <small>Quick response via WhatsApp</small>
+                        <h3>Response Time</h3>
+                        <p>Within 4 Hours</p>
+                        <small>7 days a week</small>
                     </div>
                 </div>
                 
@@ -1071,7 +971,7 @@
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                            <i class="fas fa-paper-plane"></i> Send Enquiry
                         </button>
                     </form>
                 </div>
@@ -1081,8 +981,8 @@
             <div class="map-container">
                 <div class="placeholder-image map-placeholder">
                     <i class="fas fa-map-marked-alt"></i>
-                    <p>Service Area Map: Oxfordshire & Surrounding Counties</p>
-                    <small>15-mile radius shown | Extended coverage available</small>
+                    <p>Service Area Map: Devon, Cornwall & Somerset</p>
+                    <small>Free delivery within 15 miles | £2 per mile beyond</small>
                 </div>
             </div>
         </div>
@@ -1094,11 +994,8 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-caravan"></i>
-                            <i class="fas fa-cloud steam-icon"></i>
-                        </div>
-                        <span>Nomad Steam</span>
+                        <img src="images/roaming-sauna-logo.png" alt="Roaming Heat Logo" class="logo-image">
+                        <span class="logo-text">Roaming Heat</span>
                     </div>
                     <p>Bringing authentic Finnish sauna culture to your doorstep. Premium mobile sauna hire for wellness, events, and unforgettable experiences.</p>
                     <div class="social-links">
@@ -1135,23 +1032,23 @@
                     <h4>Contact Info</h4>
                     <ul class="contact-list">
                         <li>
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+441234567890">01234 567 890</a>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/447491807060" target="_blank">07491 807 060</a>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <a href="mailto:hello@nomadsteam.co.uk">hello@nomadsteam.co.uk</a>
+                            <a href="mailto:info@roamingheat.co.uk">info@roamingheat.co.uk</a>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Oxfordshire, UK</span>
+                            <span>Devon, UK</span>
                         </li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Nomad Steam Mobile Saunas. All rights reserved. | Crafted with <i class="fas fa-heart"></i> for wellness</p>
+                <p>&copy; 2025 Roaming Heat Mobile Saunas. All rights reserved. | Crafted with <i class="fas fa-heart"></i> for wellness</p>
             </div>
         </div>
     </footer>
