@@ -584,6 +584,13 @@ p {
     z-index: 0;
 }
 
+.hero-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .hero-placeholder {
     width: 100%;
     height: 100%;
@@ -721,6 +728,17 @@ p {
 
 .about-image {
     height: 500px;
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .about-text h3 {
@@ -1018,14 +1036,28 @@ p {
     overflow: hidden;
     cursor: pointer;
     transition: var(--transition-normal);
+    box-shadow: var(--shadow-sm);
 }
 
 .gallery-item:hover {
     transform: scale(1.03);
+    box-shadow: var(--shadow-md);
 }
 
 .gallery-item:hover .gallery-overlay {
     opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-normal);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
 .gallery-overlay {
@@ -1045,6 +1077,63 @@ p {
 .gallery-overlay i {
     font-size: 3rem;
     color: var(--white);
+}
+
+.gallery-media {
+    margin-top: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.media-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-normal);
+}
+
+.media-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.media-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+}
+
+.media-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+}
+
+.media-content {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.media-content h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.media-content p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 /* ============================================
